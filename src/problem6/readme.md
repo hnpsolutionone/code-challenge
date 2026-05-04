@@ -25,7 +25,7 @@ Design a **secure, scalable, real-time leaderboard system** that:
 
 # 3. High-Level Architecture
 
-![High-Level Architecture Diagram](images/High-Level_Architecture.png)
+![High-Level Architecture Diagram](images/high-level_architecture.png)
 
 ---
 
