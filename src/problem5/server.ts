@@ -1,0 +1,11 @@
+// server.ts
+import app from "./app";
+import { connectDB } from "./config/db";
+import dotenv from "dotenv";
+dotenv.config();
+
+connectDB().then(() => {
+  app.listen(3000, () => {
+    console.log("Server running on port 3000");
+  });
+});
