@@ -113,13 +113,13 @@ npm test
 
 ## API Endpoints
 
-| Method | Endpoint         | Description        | Sample Data                                               |
-| ------ | ---------------- | ------------------ | --------------------------------------------------------- |
-| GET    | `/resources`     | Get all resources  | -                                                         |
-| GET    | `/resources/:id` | Get resource by ID | -                                                         |
-| POST   | `/resources`     | Create resource    | `{ "name": "BTC", "type": "crypto", "status": "active" }` |
-| PUT    | `/resources/:id` | Update resource    | `{ "name": "BTC", "type": "crypto", "status": "inactive" }` |
-| DELETE | `/resources/:id` | Delete resource    | -                                                         |
+| Method | Endpoint         | Description        | Query Params                      | Sample Data                                                 |
+| ------ | ---------------- | ------------------ | --------------------------------- | ----------------------------------------------------------- |
+| GET    | `/resources`     | Get all resources  | `type`, `status`, `page`, `limit` | -                                                           |
+| GET    | `/resources/:id` | Get resource by ID | -                                 | -                                                           |
+| POST   | `/resources`     | Create resource    | -                                 | `{ "name": "BTC", "type": "crypto", "status": "active" }`   |
+| PUT    | `/resources/:id` | Update resource    | -                                 | `{ "name": "BTC", "type": "crypto", "status": "inactive" }` |
+| DELETE | `/resources/:id` | Delete resource    | -                                 | -                                                           |
 
 ---
 
