@@ -89,6 +89,7 @@ Swagger UI is available at:
 ```text
 http://localhost:3000/docs
 ```
+You can use Swagger UI to explore and test all API endpoints directly from the browser.
 
 ### Features:
 
@@ -101,7 +102,7 @@ http://localhost:3000/docs
 Run unit tests:
 
 ```bash
-npm test
+npm run test
 ```
 
 ### Current test coverage:
