@@ -8,6 +8,7 @@ const service = new ResourceService();
 // Controller handles HTTP only, not business logic
 export const createResource = async (req: Request, res: Response, next: NextFunction) => {
   try {
+    const service = new ResourceService(); // 👈 move inside
     const data: CreateResourceDTO = req.body;
     const result = await service.create(data);
     res.status(201).json(result);

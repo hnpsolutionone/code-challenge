@@ -1,4 +1,5 @@
 // docs/swagger.ts
+import { Express } from "express";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 
@@ -13,6 +14,6 @@ const spec = swaggerJsdoc({
   apis: ["./routes/*.ts", "./dist/routes/*.js"]
 });
 
-export const setupSwagger = (app) => {
+export const setupSwagger = (app: Express) => {
   app.use("/docs", swaggerUi.serve, swaggerUi.setup(spec));
 };
