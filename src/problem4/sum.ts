@@ -1,4 +1,16 @@
 /**
+ * Validate that n is a positive integer (> 0)
+ *
+ * @param n - input number
+ * @throws Error if n is not a valid positive integer
+ */
+function assert_positive_integer(n: number): void {
+  if (typeof n !== "number" || n % 1 !== 0 || n <= 0) {
+    throw new Error("n must be a positive integer (> 0)");
+  }
+}
+
+/**
  * Calculate the sum from 1 to n using an iterative loop.
  *
  * @param n - A non-negative integer
@@ -22,11 +34,12 @@
  */
 
 export function sum_to_n_a(n: number): number {
-    let sum = 0;
-    for (let i = 1; i <= n; i++) {
-        sum += i;
-    }
-    return sum;
+  assert_positive_integer(n);
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
@@ -55,7 +68,8 @@ export function sum_to_n_a(n: number): number {
  * @see https://en.wikipedia.org/wiki/Arithmetic_series
  */
 export function sum_to_n_b(n: number): number {
-    return (n * (n + 1)) / 2;
+  assert_positive_integer(n);
+  return (n * (n + 1)) / 2;
 }
 
 /**
@@ -84,14 +98,11 @@ export function sum_to_n_b(n: number): number {
  *
  * @see https://en.wikipedia.org/wiki/Recursion_(computer_science)
  */
-export function sum_to_n(n: number): number {
-  if (n < 0) {
-    throw new Error("n must be >= 0");
-  }
-
+export function sum_to_n_c(n: number): number {
   if (n === 0) {
     return 0;
   }
 
-  return n + sum_to_n(n - 1);
+  assert_positive_integer(n);
+  return n + sum_to_n_c(n - 1);
 }
