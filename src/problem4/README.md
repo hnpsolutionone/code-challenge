@@ -82,7 +82,7 @@ npx jest
 
 ---
 
-## 📊 Test Coverage
+## Test Coverage
 
 The test file `sum.test.ts` verifies:
 
@@ -96,7 +96,7 @@ The test file `sum.test.ts` verifies:
 
 ---
 
-## ⚠️ Notes
+## Notes
 
 * Functions are expected to work with **non-negative integers (`n ≥ 0`)**
 * Behavior for negative inputs should be explicitly handled (or tested if defined)
